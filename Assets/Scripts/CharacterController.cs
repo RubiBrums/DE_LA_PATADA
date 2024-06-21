@@ -19,7 +19,7 @@ public class CharacterController : MonoBehaviour
     public AudioClip sonidoInquieta;
 
 
-    /*private Animator animator;*/
+    private Animator animator;
 
     private bool miraDerecha = true;
 
@@ -27,7 +27,7 @@ public class CharacterController : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         boxColision = GetComponent<BoxCollider2D>();
-        /*animator = GetComponent<Animator>();*/
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -37,7 +37,7 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*animator.SetBool("InGround", EstaEnPiso());*/
+        animator.SetBool("InGround", EstaEnPiso());
 
     }
 
@@ -51,7 +51,7 @@ public class CharacterController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) && EstaEnPiso())
         {
-            /*animator.Play("Jump");*/
+            animator.Play("Jump");
             AudioManager.Instance.ReproducirSonido(sonidoSalto);
             rigidBody.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
@@ -64,11 +64,11 @@ public class CharacterController : MonoBehaviour
 
         if (inputMovimiento != 0f)
         {
-            /*animator.SetBool("IsWalking", true);*/
+            animator.SetBool("IsWalking", true);
         }
         else
         {
-            /*animator.SetBool("IsWalking", false);*/
+            animator.SetBool("IsWalking", false);
         }
 
         rigidBody.velocity = new Vector2(inputMovimiento * velocidad, rigidBody.velocity.y);
@@ -91,7 +91,7 @@ public class CharacterController : MonoBehaviour
         {
             AudioManager.Instance.ReproducirSonido(sonidoInquieta);
             velocidad = 5.5f;
-            /*animator.Play("Slip");*/
+            animator.Play("Slip");
         }
     }
 
@@ -100,7 +100,7 @@ public class CharacterController : MonoBehaviour
         if (collision.gameObject.tag == "Barro")
         {
             velocidad = 10f;
-            /*animator.Play("Idle");*/
+            animator.Play("Idle");
         }
     }
 
