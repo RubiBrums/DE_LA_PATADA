@@ -10,8 +10,14 @@ public class EnemigoFollowPlayer : MonoBehaviour
     private Rigidbody2D rigidBody;
     private BoxCollider2D boxColision;
 
-    public int vidas = 5;
-    public int damage = 2;
+    [SerializeField] private float hp;
+
+    public int hitCount = 0;
+    private Animator minion;
+    public AudioClip golpe;
+    public AudioClip ouch;
+
+    public int damage = 1;
 
     private bool miraDerecha = true;
     private bool isFollowing = false;
@@ -88,8 +94,37 @@ public class EnemigoFollowPlayer : MonoBehaviour
         }
 
     }
-    void Atacar()
-    {
 
+    public void RecibirDano(float dano)
+    {
+        hp -= dano;
+
+        if (hp == 3f)
+        {
+            AudioManager.Instance.ReproducirSonido(golpe);
+            minion.SetTrigger("Hit1");
+        }
+
+        if (hp == 2f)
+        {
+            AudioManager.Instance.ReproducirSonido(golpe);
+            minion.SetTrigger("Hit2");
+        }
+
+        if (hp == 1f)
+        {
+            AudioManager.Instance.ReproducirSonido(golpe);
+            minion.SetTrigger("Hit3");
+        }
+
+        if (hp <= 0f)
+        {
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 }
