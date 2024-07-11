@@ -6,13 +6,12 @@ public class EnemigoFollowPlayer : MonoBehaviour
 {
     [SerializeField] Animator animator;
     public float velocidad = 5f;
-    public static EnemigoFollowPlayer Instance { get; private set; }
 
     private Rigidbody2D rigidBody;
     private BoxCollider2D boxColision;
 
     public int vidas = 5;
-    public int damage = 1;
+    public int damage = 2;
 
     private bool miraDerecha = true;
     private bool isFollowing = false;
@@ -89,5 +88,8 @@ public class EnemigoFollowPlayer : MonoBehaviour
         }
 
     }
+    void Atacar()
+    {
 
+    }
 }
