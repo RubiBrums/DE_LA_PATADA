@@ -5,6 +5,9 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
 
+    public static CharacterController Instance { get; private set; }
+
+
     public GameObject manchaAceite;
 
     public float velocidad = 5f;
@@ -18,8 +21,11 @@ public class CharacterController : MonoBehaviour
     public AudioClip sonidoDano;
     public AudioClip sonidoInquieta;
 
+    public GameManager manager;
 
     private Animator animator;
+
+    public CircleCollider2D recibeDano;
 
     private bool miraDerecha = true;
 
@@ -28,6 +34,8 @@ public class CharacterController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         boxColision = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        recibeDano = GetComponent<CircleCollider2D>();
+
     }
     void Update()
     {
@@ -93,6 +101,7 @@ public class CharacterController : MonoBehaviour
             velocidad = 5.5f;
             animator.Play("Slip");
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -103,5 +112,17 @@ public class CharacterController : MonoBehaviour
             animator.Play("Idle");
         }
     }
+
+    public void RecibirDamage()
+    {
+
+    }
+
+    public void Death()
+    {
+        animator.Play("Death");
+    }
+
+
 
 }

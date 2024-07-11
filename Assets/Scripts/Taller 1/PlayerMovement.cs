@@ -37,18 +37,26 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if (moveInput> 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Moverse a la derecha
+        }
+        else if (moveInput < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Moverse a la izquierda
+        }
     }
 
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         jumpsLeft--;
+    }
 
-        // Si quieres que el jugador pueda cambiar la dirección del salto, puedes agregar esto:
-        // if (moveInput != 0)
-        // {
-        //     rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        // }
+    public void ForcedJump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     void OnDrawGizmosSelected()

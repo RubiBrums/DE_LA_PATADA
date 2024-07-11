@@ -8,7 +8,13 @@ public class GameManager : MonoBehaviour
     public int PuntosTotales { get; private set; }
     public HUD hud;
 
-    private int vidas = 2;
+    private int vidas = 3;
+
+    /*public void Cargar()
+    {
+        PlayerPrefs.SetInt("PuntosTotales", 0);
+        PlayerPrefs.SetInt("vidas", 3);
+    }*/
 
     void Awake()
     {
@@ -25,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         PuntosTotales += puntosPorSumar;
         hud.ActualizarPuntos(PuntosTotales);
+        //PlayerPrefs.GetInt("PuntosTotales", +1);
     }
     public void PerderVida()
     {
@@ -38,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public bool RecuperarVida()
     {
-        if (vidas == 2)
+        if (vidas == 3)
         {
             return false;
         }
@@ -52,5 +59,8 @@ public class GameManager : MonoBehaviour
         GameOverScreen.Instance.Perder();
     }
 
-
+    //public void CheckPoint()
+    //{
+        //PlayerPrefs.GetInt("vidas", 0);
+    //}
 }
