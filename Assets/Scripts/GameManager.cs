@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public int PuntosTotales { get; private set; }
     public HUD hud;
 
-    private int vidas = 2;
+    private int vidas = 3;
 
     void Awake()
     {
@@ -31,14 +31,17 @@ public class GameManager : MonoBehaviour
         vidas -= 1;
         if (vidas <= 0)
         {
-            Destroy(gameObject);
+            vidas = 0;
+            hud.DesactivarVida(vidas);
+            // Destroy(gameObject);
+            GameOver();
         }
         hud.DesactivarVida(vidas);
     }
 
     public bool RecuperarVida()
     {
-        if (vidas == 2)
+        if (vidas == 3)
         {
             return false;
         }

@@ -12,7 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologo.unity
     guid: 51c95bafef445874c8aef21d979cd303
   - enabled: 1
-    path: Assets/Scenes/1_Fabrica.unity
+    path: Assets/Scenes/1_SalaDePruebas.unity
+    guid: 408891238cd02b2458eaaa82caa8d50f
+  - enabled: 1
+    path: Assets/Scenes/EscenaDePruebas.unity
     guid: c485c8de236b57c44bc87bf649ee75d3
   - enabled: 1
     path: Assets/Scenes/2_Salida.unity

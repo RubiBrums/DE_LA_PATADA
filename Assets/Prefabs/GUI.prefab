@@ -819,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2663244725290853264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 2163098537726189967}
   - component: {fileID: 4105432463325328467}
   - component: {fileID: 2663244725390994925}
+  - component: {fileID: 1391512616992538574}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -1010,11 +1011,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntaje: {fileID: 2663244725453881531}
   vidasVacias:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2663244726725698593}
+  - {fileID: 2663244726399322212}
+  - {fileID: 2663244725290853267}
   vidas:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2663244725000830739}
+  - {fileID: 2663244725104436656}
+  - {fileID: 2663244726914944671}
 --- !u!114 &2163098537726189967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,6 +1063,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixerMusica: {fileID: 24100000, guid: 2ff7c732bb944df47b70f6ed1488e5ca, type: 2}
   audioMixerSFX: {fileID: 24100000, guid: c0ab2fdaacd89b44dbdf3aae3090a857, type: 2}
+--- !u!114 &1391512616992538574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663244725390994920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90193bf721cdc9c488dabf7d95213ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hud: {fileID: 1880524550}
 --- !u!1 &2663244725453881525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,7 +1954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2663244726914944668
 RectTransform:
   m_ObjectHideFlags: 0

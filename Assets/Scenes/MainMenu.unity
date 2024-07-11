@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5ae11aefa87864a87caac977864c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escenaACargar: Prologo
+  escenaACargar: EscenaDePruebas
 --- !u!4 &119579409
 Transform:
   m_ObjectHideFlags: 0
