@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemigo
   - RecibirDano
+  - EnemigoRecibeDano
   layers:
   - Default
   - TransparentFX

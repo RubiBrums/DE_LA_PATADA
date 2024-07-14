@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
 
-    public GameObject manchaAceite;
 
     public float velocidad = 5f;
     public float fuerzaSalto = 15f;

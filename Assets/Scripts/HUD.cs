@@ -40,14 +40,14 @@ public class HUD : MonoBehaviour
     {
         Debug.Log("MostrarPowerUp llamado");
         marcoGusanoEscurridizo.SetActive(true);
-        
-
+        tiempoGusanoEscurridizo.gameObject.SetActive(true); 
     }
 
     public void OcultarPowerUp()
     {
         Debug.Log("OcultarPowerUp llamado");
         marcoGusanoEscurridizo.SetActive(false);
+        tiempoGusanoEscurridizo.gameObject.SetActive(false); 
     }
 
     public void ActualizarTiempoPowerUp(float tiempo)

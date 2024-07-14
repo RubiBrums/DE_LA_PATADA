@@ -8,32 +8,38 @@ public class Ataque : MonoBehaviour
     [SerializeField] private float radioAtaque;
     [SerializeField] private float danoAtaque;
 
-    //private Animator animator;
     public AudioClip ataque;
+
     private void Start()
     {
-        //animator = GetComponent<Animator>();
+        // Inicializa cualquier cosa necesaria aquí
     }
+
     private void Atacar()
     {
-        //animator.SetBool("IsAttacking", true);
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorAtaque.position, radioAtaque);
 
         foreach (Collider2D colisionador in objetos)
         {
-            if (colisionador.CompareTag("Enemigo"))
+            if (colisionador.CompareTag("EnemigoRecibeDano"))
             {
-                colisionador.transform.GetComponent<EnemigoFollowPlayer>().RecibirDano(danoAtaque);
+                EnemigoFollowPlayer enemigo = colisionador.GetComponentInParent<EnemigoFollowPlayer>();
+                if (enemigo != null)
+                {
+                    enemigo.RecibirDano(danoAtaque);
+                }
+                else
+                {
+                    Debug.LogError("El objeto con la etiqueta 'EnemigoRecibeDano' no tiene el componente 'EnemigoFollowPlayer'.");
+                }
             }
         }
         StartCoroutine(FinAtaque());
-
     }
 
     private IEnumerator FinAtaque()
     {
         yield return new WaitForSeconds(0.1f); // Ajusta este valor según sea necesario
-        //animator.SetBool("IsAttacking", false);
     }
 
     private void OnDrawGizmos()

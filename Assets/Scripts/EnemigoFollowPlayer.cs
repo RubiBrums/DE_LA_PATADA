@@ -9,6 +9,7 @@ public class EnemigoFollowPlayer : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     private BoxCollider2D boxColision;
+    private Collider2D colisionadorRecibeDano;
 
     [SerializeField] private float hp;
 
@@ -16,6 +17,7 @@ public class EnemigoFollowPlayer : MonoBehaviour
     private Animator minion;
     public AudioClip golpe;
     public AudioClip ouch;
+    public GameObject detectorDeDaño;
 
     public int damage = 1;
 
@@ -23,10 +25,12 @@ public class EnemigoFollowPlayer : MonoBehaviour
     private bool isFollowing = false;
 
     [SerializeField] Transform player;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         boxColision = GetComponent<BoxCollider2D>();
+        colisionadorRecibeDano = transform.Find("ColisionadorRecibeDano").GetComponent<Collider2D>(); // Ajusta esto según sea necesario
         //animator = GetComponent<Animator>();
     }
 
@@ -39,7 +43,7 @@ public class EnemigoFollowPlayer : MonoBehaviour
     {
         if (isFollowing == false) return;
 
-        float velocidadMovimiento = player.position.x - transform.position.x < 0? -1f: 1f;
+        float velocidadMovimiento = player.position.x - transform.position.x < 0 ? -1f : 1f;
 
         if (velocidadMovimiento != 0f)
         {
@@ -73,7 +77,7 @@ public class EnemigoFollowPlayer : MonoBehaviour
             animator.SetBool("Alertado", true);
             //float velocidadMovimiento = player.position.x;
 
-            Invoke("ActivateFollow", 0.425f); 
+            Invoke("ActivateFollow", 0.425f);
 
             //animator.Play("Correr");
         }

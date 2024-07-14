@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;  // Asegúrate de tener esto para gestionar escenas
 
 public class MenuPausa : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class MenuPausa : MonoBehaviour
         {
             if (juegoPausado)
             {
-
                 Continuar();
             }
             else
@@ -56,7 +56,6 @@ public class MenuPausa : MonoBehaviour
         botonPausa.SetActive(false);
         menuPausa.SetActive(false);
         menuOpciones.SetActive(true);
-
     }
 
     public void Salir()
@@ -64,4 +63,6 @@ public class MenuPausa : MonoBehaviour
         Debug.Log("Salir");
         Application.Quit();
     }
+
+
 }
