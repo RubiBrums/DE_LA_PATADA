@@ -10,7 +10,6 @@ public class MenuOpciones : MonoBehaviour
 
     private void Start()
     {
-        // Cargar las preferencias guardadas
         CargarPreferencias();
     }
 

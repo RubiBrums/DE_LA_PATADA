@@ -21,7 +21,7 @@ public class GusanoEscurridizo : MonoBehaviour
     {
         Debug.Log("PowerUp activado");
         float velocidadOriginal = player.velocidad;
-        player.velocidad = 12f;
+        player.velocidad = 15f;
 
         HUD hud = FindObjectOfType<HUD>();
         hud.MostrarPowerUp();
