@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -148100637, guid: abbac43f7566d6f428437958c9854613, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
-  sonidoScore: {fileID: 0}
+  sonidoScore: {fileID: 8300000, guid: 9f4e86e3ecc9321419169a36d8e37b4b, type: 3}
 --- !u!95 &8442407217549846449
 Animator:
   serializedVersion: 5
