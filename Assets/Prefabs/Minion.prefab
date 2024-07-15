@@ -170,6 +170,7 @@ MonoBehaviour:
   colisionAtaque: {fileID: 6313599958236734190}
   character: {fileID: 0}
   manager: {fileID: 0}
+  damage: 1
 --- !u!1 &4713573413775092491
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,10 +297,9 @@ MonoBehaviour:
   velocidad: 5
   hp: 2
   hitCount: 0
-  golpe: {fileID: 8300000, guid: 5b8c8e237b7517a448896a123c548f32, type: 3}
+  golpe: {fileID: 8300000, guid: b7d79ee35dd053f48a5c09fd0248594c, type: 3}
   ouch: {fileID: 8300000, guid: 5b8c8e237b7517a448896a123c548f32, type: 3}
   "detectorDeDa\xF1o": {fileID: 2138190341932917315}
-  damage: 1
   player: {fileID: 0}
 --- !u!70 &8593924858338537421
 CapsuleCollider2D:

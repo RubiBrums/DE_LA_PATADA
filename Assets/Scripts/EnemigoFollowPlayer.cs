@@ -19,8 +19,6 @@ public class EnemigoFollowPlayer : MonoBehaviour
     public AudioClip ouch;
     public GameObject detectorDeDaño;
 
-    public int damage = 1;
-
     private bool miraDerecha = true;
     private bool isFollowing = false;
 
@@ -30,7 +28,7 @@ public class EnemigoFollowPlayer : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         boxColision = GetComponent<BoxCollider2D>();
-        colisionadorRecibeDano = transform.Find("ColisionadorRecibeDano").GetComponent<Collider2D>(); // Ajusta esto según sea necesario
+        //colisionadorRecibeDano = transform.Find("colisionadorRecibeDano").GetComponent<Collider2D>(); // Ajusta esto según sea necesario
         //animator = GetComponent<Animator>();
     }
 
@@ -106,19 +104,16 @@ public class EnemigoFollowPlayer : MonoBehaviour
         if (hp == 3f)
         {
             AudioManager.Instance.ReproducirSonido(golpe);
-            minion.SetTrigger("Hit1");
         }
 
         if (hp == 2f)
         {
             AudioManager.Instance.ReproducirSonido(golpe);
-            minion.SetTrigger("Hit2");
         }
 
         if (hp == 1f)
         {
             AudioManager.Instance.ReproducirSonido(golpe);
-            minion.SetTrigger("Hit3");
         }
 
         if (hp <= 0f)

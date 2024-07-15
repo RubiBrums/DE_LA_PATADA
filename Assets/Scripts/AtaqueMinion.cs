@@ -9,6 +9,7 @@ public class AtaqueMinion : MonoBehaviour
     public CharacterController character;
 
     public GameManager manager;
+    public int damage;
 
 
     void Start()
@@ -20,7 +21,7 @@ public class AtaqueMinion : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            manager.PerderVida();
+            manager.PerderVida(damage);
 
         }
 

@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
         PuntosTotales += puntosPorSumar;
         hud.ActualizarPuntos(PuntosTotales);
     }
-    public void PerderVida()
+    public void PerderVida(int daño)
     {
-        vidas -= 1;
+        vidas -= daño;
         if (vidas <= 0)
         {
             vidas = 0;

@@ -25453,6 +25453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CambioEscena
       objectReference: {fileID: 0}
+    - target: {fileID: 8091677698343672254, guid: 103d2b137b156924abd8c7dbb257c2f2, type: 3}
+      propertyPath: escenaToLoad
+      value: 3_Canal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25878,6 +25882,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535687256}
     m_Modifications:
+    - target: {fileID: 2163098537726189967, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
+      propertyPath: backgroundSound
+      value: 
+      objectReference: {fileID: 1731933464}
     - target: {fileID: 2663244726322135968, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
       propertyPath: m_Name
       value: GUI
@@ -25922,6 +25930,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4105432463325328467, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
+      propertyPath: backgroundSound
+      value: 
+      objectReference: {fileID: 1731933464}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26039,6 +26051,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 711e3992559e0c14fbc493dedf087b36, type: 3}
+--- !u!82 &1731933464 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4786995165681190292, guid: 711e3992559e0c14fbc493dedf087b36, type: 3}
+  m_PrefabInstance: {fileID: 1731933463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1750692542
 GameObject:
   m_ObjectHideFlags: 0
