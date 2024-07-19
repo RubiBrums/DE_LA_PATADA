@@ -11,19 +11,16 @@ public class AtaqueMinion : MonoBehaviour
     public GameManager manager;
     public int damage;
 
-
     void Start()
     {
-        // BcolisionAtaque = GetComponent<BoxCollider2D>();
+        // colisionAtaque = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            manager.PerderVida(damage);
-
+            collision.gameObject.GetComponent<VidaJugador>().RecibirDaño(damage);
         }
-
     }
 }

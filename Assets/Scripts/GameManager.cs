@@ -1,59 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int PuntosTotales { get; private set; }
     public HUD hud;
+    public VidaJugador vidaJugador;
 
-    private int vidas = 3;
-
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Debug.Log("Mas de 1 GameManager en la escena");
+            Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        Time.timeScale = 1f; // Asegúrate de que el tiempo esté en 1f al inicio de la escena
+
+        if (vidaJugador == null)
+        {
+            vidaJugador = FindObjectOfType<VidaJugador>();
+        }
+
+        if (hud == null)
+        {
+            hud = FindObjectOfType<HUD>();
+        }
+    }
+
     public void SumarPuntos(int puntosPorSumar)
     {
         PuntosTotales += puntosPorSumar;
         hud.ActualizarPuntos(PuntosTotales);
     }
-    public void PerderVida(int daño)
-    {
-        vidas -= daño;
-        if (vidas <= 0)
-        {
-            vidas = 0;
-            hud.DesactivarVida(vidas);
-            // Destroy(gameObject);
-            GameOver();
-        }
-        hud.DesactivarVida(vidas);
-    }
 
-    public bool RecuperarVida()
+    public void ActualizarHUD()
     {
-        if (vidas == 3)
+        for (int i = 0; i < vidaJugador.vidaMaxima; i++)
         {
-            return false;
+            if (i < vidaJugador.vida)
+            {
+                hud.ActivarVida(i);
+            }
+            else
+            {
+                hud.DesactivarVida(i);
+            }
         }
-        hud.ActivarVida(vidas);
-        vidas += 1;
-        return true;
     }
 
     public void GameOver()
     {
-        GameOverScreen.Instance.Perder();
+        if (GameOverScreen.Instance != null)
+        {
+            GameOverScreen.Instance.Perder();
+        }
+        else
+        {
+            Debug.LogError("GameOverScreen.Instance is null. Make sure GameOverScreen is properly initialized.");
+        }
     }
-
-
 }

@@ -18,7 +18,10 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        puntaje.text = GameManager.Instance.PuntosTotales.ToString();
+        if (GameManager.Instance != null)
+        {
+            puntaje.text = GameManager.Instance.PuntosTotales.ToString();
+        }
     }
 
     public void ActualizarPuntos(int puntosTotales)
@@ -28,26 +31,32 @@ public class HUD : MonoBehaviour
 
     public void DesactivarVida(int indice)
     {
-        vidas[indice].SetActive(false);
+        if (indice >= 0 && indice < vidas.Length)
+        {
+            vidas[indice].SetActive(false);
+        }
     }
 
     public void ActivarVida(int indice)
     {
-        vidas[indice].SetActive(true);
+        if (indice >= 0 && indice < vidas.Length)
+        {
+            vidas[indice].SetActive(true);
+        }
     }
 
     public void MostrarPowerUp()
     {
         Debug.Log("MostrarPowerUp llamado");
         marcoGusanoEscurridizo.SetActive(true);
-        tiempoGusanoEscurridizo.gameObject.SetActive(true); 
+        tiempoGusanoEscurridizo.gameObject.SetActive(true);
     }
 
     public void OcultarPowerUp()
     {
         Debug.Log("OcultarPowerUp llamado");
         marcoGusanoEscurridizo.SetActive(false);
-        tiempoGusanoEscurridizo.gameObject.SetActive(false); 
+        tiempoGusanoEscurridizo.gameObject.SetActive(false);
     }
 
     public void ActualizarTiempoPowerUp(float tiempo)

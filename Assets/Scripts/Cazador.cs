@@ -2,40 +2,38 @@ using UnityEngine;
 
 public class Cazador : MonoBehaviour
 {
-    public Transform puntoDisparo;
 
-    public float distanciaLinea;
-    public LayerMask capaJugador;
-    public bool jugadorEnRango;
+    public GameObject bala;
+    public Transform posicionBala;
 
-    public float tiempoUltimoDisparo;
-    public float tiempoEntreDisparos;
-    public float tiempoEsperaDisparo;
-
-    public GameObject balaCazador;
-
+    private float timer;
+    private GameObject player;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     private void Update()
     {
-        jugadorEnRango = Physics2D.Raycast(puntoDisparo.position, transform.right, distanciaLinea, capaJugador);
-        if (jugadorEnRango)
-        {
-            if (Time.deltaTime > tiempoEntreDisparos + tiempoUltimoDisparo)
-            {
-                tiempoUltimoDisparo = Time.deltaTime;
-                Invoke(nameof(Disparar), tiempoEsperaDisparo);
-            }
-        }
-    }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(puntoDisparo.position, puntoDisparo.position + transform.right * distanciaLinea);
+        float distancia = Vector2.Distance(transform.position, player.transform.position);
+
+
+        if (distancia < 15)
+        {
+            timer += Time.deltaTime;
+
+            if (timer > 2)
+            {
+                timer = 0;
+                Disparar();
+            }
+
+        }
 
     }
 
     void Disparar()
     {
-        Instantiate(balaCazador, puntoDisparo.position, puntoDisparo.rotation);
+        Instantiate(bala, posicionBala.position, Quaternion.identity);
     }
 }

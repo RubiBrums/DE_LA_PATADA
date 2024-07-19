@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3515495442819531520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.89, y: 0.33, z: 0}
+  m_LocalPosition: {x: -0.61, y: 0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 7528887935575973498}
   - component: {fileID: 6626084341435022400}
   - component: {fileID: 424463073304173521}
-  - component: {fileID: 4539689788932899188}
   m_Layer: 0
   m_Name: Cazador
   m_TagString: Untagged
@@ -131,16 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163b256289c64fd4ba49d3ca86714ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntoDisparo: {fileID: 3867973411026815975}
-  distanciaLinea: 25
-  capaJugador:
-    serializedVersion: 2
-    m_Bits: 64
-  jugadorEnRango: 0
-  tiempoUltimoDisparo: 0
-  tiempoEntreDisparos: 0
-  tiempoEsperaDisparo: 3
-  balaCazador: {fileID: 5090342542456868038, guid: 4deba68b211cd1047ac81ecf31959cfa, type: 3}
+  bala: {fileID: 5090342542456868038, guid: 4deba68b211cd1047ac81ecf31959cfa, type: 3}
+  posicionBala: {fileID: 5809739730622263476}
 --- !u!61 &424463073304173521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,24 +177,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0354338, y: 2.9458182}
   m_EdgeRadius: 0
---- !u!95 &4539689788932899188
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6132101294990745677}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7e34a5f96a1ce4b4f9805fc90a2bb23a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

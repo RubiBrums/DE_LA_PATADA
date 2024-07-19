@@ -42,11 +42,12 @@ GameObject:
   - component: {fileID: 6656259678043909757}
   - component: {fileID: 1755009921141597652}
   - component: {fileID: 8839837836160495593}
+  - component: {fileID: 6233907938673897698}
   - component: {fileID: 2310844864712629162}
   - component: {fileID: 8058781448756407526}
   - component: {fileID: 723860995182555089}
   - component: {fileID: 7777835693185647918}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Margarita
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -137,6 +138,20 @@ MonoBehaviour:
   radioAtaque: 1.6
   danoAtaque: 1
   ataque: {fileID: 8300000, guid: b42ca10017077624db89a6e6075a4826, type: 3}
+--- !u!114 &6233907938673897698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232056115386218565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56439c0e0cccca3459934491f36fa0a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaMaxima: 3
+  vida: 3
 --- !u!95 &2310844864712629162
 Animator:
   serializedVersion: 5

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PerroFollowPlayer : MonoBehaviour
 {
-
-
     public BoxCollider2D colisionAtaque;
     public static AtaqueMinion Instance { get; private set; }
     public CharacterSwimming character;
@@ -60,7 +58,7 @@ public class PerroFollowPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            manager.PerderVida(damage);
+            collision.gameObject.GetComponent<VidaJugador>().RecibirDaño(damage);
 
         }
 

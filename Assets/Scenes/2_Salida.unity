@@ -7956,6 +7956,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3f11751b8905e4d86a26a4eb7cd8f5, type: 3}
+--- !u!114 &630199797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6233907938673897698, guid: db3f11751b8905e4d86a26a4eb7cd8f5, type: 3}
+  m_PrefabInstance: {fileID: 630199796}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56439c0e0cccca3459934491f36fa0a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &714940961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25882,6 +25893,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535687256}
     m_Modifications:
+    - target: {fileID: 1391512616992538574, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
+      propertyPath: vidaJugador
+      value: 
+      objectReference: {fileID: 630199797}
     - target: {fileID: 2163098537726189967, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
       propertyPath: backgroundSound
       value: 
@@ -25931,6 +25946,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105432463325328467, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
+      propertyPath: backgroundSound
+      value: 
+      objectReference: {fileID: 1731933464}
+    - target: {fileID: 5617207001835333121, guid: 6f763cd130c9f8a41b52c1ae7fb8efc9, type: 3}
       propertyPath: backgroundSound
       value: 
       objectReference: {fileID: 1731933464}

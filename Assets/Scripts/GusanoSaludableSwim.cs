@@ -13,9 +13,8 @@ public class GusanoSaludableSwim : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             AudioManager.Instance.ReproducirSonido(sonidoConsume);
-            manager.RecuperarVida();
+            collision.gameObject.GetComponent<VidaJugador>().RecuperarVida(1);
             Destroy(this.gameObject);
-
         }
 
     }

@@ -18,6 +18,7 @@ public class CharacterController : MonoBehaviour
     public AudioClip sonidoInquieta;
 
 
+
     private Animator animator;
 
     private bool miraDerecha = true;
