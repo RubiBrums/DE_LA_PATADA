@@ -14,7 +14,7 @@ public class PotenciadorVelocidad : MonoBehaviour
 
 
 
-    public float newScrollSpeed = -7f;
+    private float newScrollSpeed = 4f;
 
 
     public AudioClip sonidoConsume;
@@ -23,11 +23,11 @@ public class PotenciadorVelocidad : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            velocidadCamino1.scrollSpeed = newScrollSpeed ++;
-            velocidadArboles1.scrollSpeed = newScrollSpeed ++;
-            velocidadArbusto1.scrollSpeed = newScrollSpeed ++;
-            velocidadPasto1.scrollSpeed = newScrollSpeed ++;
-            velocidadPastoFront1.scrollSpeed = newScrollSpeed ++;
+            velocidadCamino1.scrollSpeed = velocidadCamino1.scrollSpeed + newScrollSpeed;
+            velocidadArboles1.scrollSpeed = velocidadArboles1.scrollSpeed + newScrollSpeed;
+            velocidadArbusto1.scrollSpeed = velocidadArbusto1.scrollSpeed + newScrollSpeed;
+            velocidadPasto1.scrollSpeed = velocidadPasto1.scrollSpeed + newScrollSpeed;
+            velocidadPastoFront1.scrollSpeed = velocidadPastoFront1.scrollSpeed + newScrollSpeed;
 
 
             this.GetComponent<SpriteRenderer>().enabled = false;
@@ -56,11 +56,11 @@ public class PotenciadorVelocidad : MonoBehaviour
         }
 
         player.velocidad = velocidadOriginal;
-        velocidadCamino1.scrollSpeed = -5;
-        velocidadArboles1.scrollSpeed = -3;
-        velocidadArbusto1.scrollSpeed = -4;
-        velocidadPasto1.scrollSpeed = -2;
-        velocidadPastoFront1.scrollSpeed = -4;
+        velocidadCamino1.scrollSpeed = 5;
+        velocidadArboles1.scrollSpeed = 6;
+        velocidadArbusto1.scrollSpeed = 4;
+        velocidadPasto1.scrollSpeed = 6;
+        velocidadPastoFront1.scrollSpeed = 4;
 
         hud.OcultarPowerUp();
         Debug.Log("PowerUp desactivado, velocidad restaurada");

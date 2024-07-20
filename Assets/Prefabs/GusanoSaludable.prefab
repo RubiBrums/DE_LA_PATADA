@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  sonidoConsume: {fileID: 0}
+  sonidoConsume: {fileID: 8300000, guid: 8e46d4e7af290fb4496ae91328308c49, type: 3}
   manager: {fileID: 0}
 --- !u!58 &2095360277997130255
 CircleCollider2D:

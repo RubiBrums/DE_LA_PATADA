@@ -6,6 +6,7 @@ public class Boton : MonoBehaviour
     public Puerta puerta; // Referencia al script de la puerta
     public Animator botonAnimator; // Referencia al Animator del botón
     public float tiempoPresionado = 4f; // Tiempo que el botón permanece presionado
+    public AudioClip botonPresionado;
 
     private bool isPressed = false; // Estado del botón
 
@@ -14,6 +15,7 @@ public class Boton : MonoBehaviour
         if (other.CompareTag("Player") && !isPressed)
         {
             isPressed = true;
+            AudioManager.Instance.ReproducirSonido(botonPresionado);
             StartCoroutine(ActivarYDesactivar());
         }
     }

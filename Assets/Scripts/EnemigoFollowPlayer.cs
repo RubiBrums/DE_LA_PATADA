@@ -74,7 +74,7 @@ public class EnemigoFollowPlayer : MonoBehaviour
             //AudioManager.Instance.ReproducirSonido();
             animator.SetBool("Alertado", true);
             //float velocidadMovimiento = player.position.x;
-
+            
             Invoke("ActivateFollow", 0.425f);
 
             //animator.Play("Correr");

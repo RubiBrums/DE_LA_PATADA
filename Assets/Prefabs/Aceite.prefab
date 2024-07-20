@@ -103,7 +103,6 @@ MonoBehaviour:
   velocidadArbusto1: {fileID: 0}
   velocidadPasto1: {fileID: 0}
   velocidadPastoFront1: {fileID: 0}
-  newScrollSpeed: -2
 --- !u!70 &8811176086260377055
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,6 +135,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000000019375008, y: -0.016252937}
-  m_Size: {x: 3.900001, y: 1.0473909}
+  m_Offset: {x: 0.12615658, y: -0.023673642}
+  m_Size: {x: 2.6681728, y: 0.43889916}
   m_Direction: 1

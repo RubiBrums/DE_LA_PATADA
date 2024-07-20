@@ -7,7 +7,9 @@ public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] private GameObject reiniciar;
     [SerializeField] private GameObject menuGameOver;
-
+    [SerializeField] private GameObject botonPausa;
+    [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject menuOpciones;
     public static GameOverScreen Instance { get; private set; }
     [SerializeField] private AudioSource backgroundSound;
 
@@ -36,6 +38,9 @@ public class GameOverScreen : MonoBehaviour
 
     public void Perder()
     {
+        botonPausa.SetActive(false);
+        menuPausa.SetActive(false);
+        menuOpciones.SetActive(false);
         juegoPausado = true;
         Time.timeScale = 0f;
         reiniciar.SetActive(true);
@@ -49,6 +54,10 @@ public class GameOverScreen : MonoBehaviour
     public void Reiniciar()
     {
         juegoPausado = false;
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(true);
+        menuOpciones.SetActive(true);
+        //GameManager.Instance.ResetPuntajeEscenaActual();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
         if (backgroundSound != null)
@@ -60,6 +69,7 @@ public class GameOverScreen : MonoBehaviour
     public void MenuInicial(string nombre)
     {
         juegoPausado = false;
+        //GameManager.Instance.ResetPuntajeEscenaActual();
         Time.timeScale = 1f;
         SceneManager.LoadScene(nombre);
     }

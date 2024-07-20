@@ -7,36 +7,65 @@ public class AudioManager : MonoBehaviour
     private AudioSource audioSource;
     public static AudioManager Instance { get; private set; }
 
-
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // Asegura que el AudioManager persista entre escenas
         }
         else
         {
-            Debug.Log(" Más de 1 AudioManager");
+            Destroy(gameObject); // Destruye instancias adicionales del AudioManager
         }
     }
 
-    void Start()
+    private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        Instance = this;
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
 
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component is missing on AudioManager game object.");
+        }
     }
 
     public void ReproducirSonido(AudioClip audio)
     {
-        audioSource.PlayOneShot(audio);
+        if (audioSource != null && audio != null)
+        {
+            audioSource.PlayOneShot(audio);
+        }
+        else
+        {
+            Debug.LogError("AudioSource or AudioClip is null.");
+        }
     }
+
     public void StopSonido()
     {
-        audioSource.Pause();
+        if (audioSource != null)
+        {
+            audioSource.Pause();
+        }
+        else
+        {
+            Debug.LogError("AudioSource is null.");
+        }
     }
+
     public void ResumeSonido()
     {
-        audioSource.Play();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogError("AudioSource is null.");
+        }
     }
 }

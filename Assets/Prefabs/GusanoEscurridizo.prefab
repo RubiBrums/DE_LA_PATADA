@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ba64e314434dd43867fbe014f1c1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidoConsume: {fileID: 0}
+  sonidoConsume: {fileID: 8300000, guid: 8e46d4e7af290fb4496ae91328308c49, type: 3}
 --- !u!58 &617830029885378072
 CircleCollider2D:
   m_ObjectHideFlags: 0

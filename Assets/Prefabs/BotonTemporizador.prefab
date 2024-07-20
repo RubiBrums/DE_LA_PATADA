@@ -123,6 +123,7 @@ MonoBehaviour:
   puerta: {fileID: 0}
   botonAnimator: {fileID: 8385070095810762135}
   tiempoPresionado: 4
+  botonPresionado: {fileID: 8300000, guid: 217f18a37f1418d48bbd8c531d1e2fe8, type: 3}
 --- !u!61 &5872786793911603827
 BoxCollider2D:
   m_ObjectHideFlags: 0

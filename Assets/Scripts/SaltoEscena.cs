@@ -9,7 +9,7 @@ public class SaltoEscena : MonoBehaviour
 
     public void Skip()
     {
-        Time.timeScale = 1f;  
+        Time.timeScale = 1f;
         SceneManager.LoadScene(escenaACargar);
     }
 }

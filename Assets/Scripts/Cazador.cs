@@ -5,6 +5,7 @@ public class Cazador : MonoBehaviour
 
     public GameObject bala;
     public Transform posicionBala;
+    public AudioClip Disparo;
 
     private float timer;
     private GameObject player;
@@ -22,7 +23,7 @@ public class Cazador : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > 2)
+            if (timer > 2.5)
             {
                 timer = 0;
                 Disparar();
@@ -34,6 +35,7 @@ public class Cazador : MonoBehaviour
 
     void Disparar()
     {
+        AudioManager.Instance.ReproducirSonido(Disparo);
         Instantiate(bala, posicionBala.position, Quaternion.identity);
     }
 }

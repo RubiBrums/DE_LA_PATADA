@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bala: {fileID: 5090342542456868038, guid: 4deba68b211cd1047ac81ecf31959cfa, type: 3}
   posicionBala: {fileID: 5809739730622263476}
+  Disparo: {fileID: 8300000, guid: 82580286da4a5ee48a28bf0e75e7e2af, type: 3}
 --- !u!61 &424463073304173521
 BoxCollider2D:
   m_ObjectHideFlags: 0

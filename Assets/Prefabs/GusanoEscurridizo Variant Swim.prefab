@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 343.5
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.16349177
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 585219494635719120, guid: ed227c30948ce234cab4005b6628e489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -78,8 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52621a045bfca77419966a7f88970982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadEscenario: {fileID: 0}
-  velocidadBG: {fileID: 0}
-  velocidad1: {fileID: 0}
-  velocidad2: {fileID: 0}
-  newScrollSpeed: 5
+  boostedSpeed: -7
+  duration: 5
+  sonidoConsume: {fileID: 8300000, guid: 8e46d4e7af290fb4496ae91328308c49, type: 3}

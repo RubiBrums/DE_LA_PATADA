@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterSwimming : MonoBehaviour
@@ -29,8 +27,11 @@ public class CharacterSwimming : MonoBehaviour
     {
         float inputMovimientoX = Input.GetAxis("Horizontal");
         float inputMovimientoY = Input.GetAxis("Vertical");
-
-        // Asigna ambas componentes de velocidad en una sola operación
         rigidBody.velocity = new Vector2(inputMovimientoX * velocidad, inputMovimientoY * velocidad);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log($"Jugador detecta colisión con: {collision.name}, Layer: {collision.gameObject.layer}");
     }
 }

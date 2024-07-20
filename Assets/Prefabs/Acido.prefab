@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: df910269dbabbb2489d133943c6e4de5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  manager: {fileID: 0}
+  gameManagerPrefab: {fileID: 0}
   damage: 1
+  acido: {fileID: 8300000, guid: 7b84e446601009e45b425ca7b0bb741c, type: 3}
 --- !u!70 &6815979728380277320
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

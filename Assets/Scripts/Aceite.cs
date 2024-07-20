@@ -12,19 +12,17 @@ public class Aceite : MonoBehaviour
     public ScrollingTilemap velocidadPastoFront1;
 
 
-
-
-    public float newScrollSpeed = -3f;
+    private float newScrollSpeed = 2f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            velocidadCamino1.scrollSpeed = newScrollSpeed++;
-            velocidadArboles1.scrollSpeed = newScrollSpeed++;
-            velocidadArbusto1.scrollSpeed = newScrollSpeed++;
-            velocidadPasto1.scrollSpeed = newScrollSpeed++;
-            velocidadPastoFront1.scrollSpeed = newScrollSpeed++;
+            velocidadCamino1.scrollSpeed = velocidadCamino1.scrollSpeed - newScrollSpeed;
+            velocidadArboles1.scrollSpeed = velocidadArboles1.scrollSpeed - newScrollSpeed;
+            velocidadArbusto1.scrollSpeed = velocidadArbusto1.scrollSpeed - newScrollSpeed;
+            velocidadPasto1.scrollSpeed = velocidadPasto1.scrollSpeed - newScrollSpeed;
+            velocidadPastoFront1.scrollSpeed = velocidadPastoFront1.scrollSpeed - newScrollSpeed;
 
 
             this.GetComponent<SpriteRenderer>().enabled = false;
@@ -37,7 +35,7 @@ public class Aceite : MonoBehaviour
     {
         Debug.Log("Entró en aceite");
         float velocidadOriginal = player.velocidad;
-        player.velocidad = 2.5f;
+        player.velocidad = 3f;
 
         float tiempoRestante = 5f;
         while (tiempoRestante > 0)
@@ -47,11 +45,11 @@ public class Aceite : MonoBehaviour
         }
 
         player.velocidad = velocidadOriginal;
-        velocidadCamino1.scrollSpeed = -5;
-        velocidadArboles1.scrollSpeed = -3;
-        velocidadArbusto1.scrollSpeed = -4;
-        velocidadPasto1.scrollSpeed = -2;
-        velocidadPastoFront1.scrollSpeed = -4;
+        velocidadCamino1.scrollSpeed = 6;
+        velocidadArboles1.scrollSpeed = 3;
+        velocidadArbusto1.scrollSpeed = 4;
+        velocidadPasto1.scrollSpeed = 6;
+        velocidadPastoFront1.scrollSpeed = 4;
 
         Debug.Log("Se quitó el aceite, velocidad restaurada");
     }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VidaJugador : MonoBehaviour
@@ -7,6 +6,8 @@ public class VidaJugador : MonoBehaviour
     public int vidaMaxima;
     public int vida;
     private GameManager manager;
+    private bool esInvulnerable = false;
+    public float tiempoInvulnerable = 2f; // Tiempo de invulnerabilidad en segundos
 
     private void Start()
     {
@@ -24,9 +25,13 @@ public class VidaJugador : MonoBehaviour
 
     public void RecibirDaño(int daño)
     {
-        vida -= daño;
-        if (vida < 0) vida = 0;
-        manager.ActualizarHUD();
+        if (!esInvulnerable)
+        {
+            vida -= daño;
+            if (vida < 0) vida = 0;
+            manager.ActualizarHUD();
+            StartCoroutine(Invulnerabilidad());
+        }
     }
 
     public void RecuperarVida(int cantidad)
@@ -34,5 +39,12 @@ public class VidaJugador : MonoBehaviour
         vida += cantidad;
         if (vida > vidaMaxima) vida = vidaMaxima;
         manager.ActualizarHUD();
+    }
+
+    private IEnumerator Invulnerabilidad()
+    {
+        esInvulnerable = true;
+        yield return new WaitForSeconds(tiempoInvulnerable);
+        esInvulnerable = false;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrollingTilemap : MonoBehaviour
 {
-    public float scrollSpeed = 5f;
+    public float scrollSpeed;
 
     void Update()
     {
@@ -12,7 +12,7 @@ public class ScrollingTilemap : MonoBehaviour
 
         foreach (Transform child in transform)
         {
-            child.Translate(Vector2.left * moveAmount);
+            child.Translate(Vector2.right * moveAmount);
         }
     }
 }

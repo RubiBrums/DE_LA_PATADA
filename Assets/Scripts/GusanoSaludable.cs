@@ -10,11 +10,12 @@ public class GusanoSaludable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
+            Debug.Log("Power-up collided with player.");
             AudioManager.Instance.ReproducirSonido(sonidoConsume);
             collision.gameObject.GetComponent<VidaJugador>().RecuperarVida(1);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 

@@ -6,7 +6,7 @@ public class GusanoSaludableSwim : MonoBehaviour
 {
     public CharacterSwimming character;
     public AudioClip sonidoConsume;
-    public GameManager manager;
+    public GameObject gameManagerPrefab;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

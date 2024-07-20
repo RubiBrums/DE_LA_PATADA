@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3399130818571524599, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: ladridoGalgo
+      value: 
+      objectReference: {fileID: 8300000, guid: 87ac124b23884bc4785b92cbd21cdd6c, type: 3}
+    - target: {fileID: 3399130818571524599, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: ladridoQuiltro
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3453623326853355538, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
       propertyPath: m_Size.x
       value: 0.6615763
@@ -76,6 +84,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4498238916318169349, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: m_Radius
+      value: 7.28
+      objectReference: {fileID: 0}
     - target: {fileID: 5663583643487728531, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -89,8 +101,24 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8984482297545592814, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: ladridoGalgo
+      value: 
+      objectReference: {fileID: 8300000, guid: 87ac124b23884bc4785b92cbd21cdd6c, type: 3}
+    - target: {fileID: 8984482297545592814, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
       propertyPath: followDistance
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984482297545592814, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: ladridoQuiltro
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128066197360702541, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128066197360702541, guid: 5d799d29508c1954e8c3fd0f2afa4513, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

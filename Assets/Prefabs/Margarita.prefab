@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1755009921141597652}
   - component: {fileID: 8839837836160495593}
   - component: {fileID: 6233907938673897698}
+  - component: {fileID: 5510593579068310848}
   - component: {fileID: 2310844864712629162}
   - component: {fileID: 8058781448756407526}
   - component: {fileID: 723860995182555089}
@@ -152,6 +153,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 3
   vida: 3
+  tiempoInvulnerable: 2
+--- !u!114 &5510593579068310848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232056115386218565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd1c13946e86ad468de9a881dc63faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntaje: 0
 --- !u!95 &2310844864712629162
 Animator:
   serializedVersion: 5

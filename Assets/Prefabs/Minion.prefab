@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021811604, y: -0.07633817}
+  m_Offset: {x: -0.110816956, y: 0.10166955}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5300658, y: 3.6827433}
+  m_Size: {x: 3.945404, y: 4.038759}
   m_EdgeRadius: 0
 --- !u!1 &3987484308777876290
 GameObject:
@@ -142,7 +142,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.5340271, y: -0.133506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -153,7 +153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0593414, y: 1.6823634}
   m_EdgeRadius: 0
 --- !u!114 &5576211153435030425
 MonoBehaviour:
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colisionAtaque: {fileID: 6313599958236734190}
   character: {fileID: 0}
-  manager: {fileID: 0}
+  gameManagerPrefab: {fileID: 8835641425793074319, guid: 3bbb351d28623be468d3f79f1ab53bda, type: 3}
   damage: 1
 --- !u!1 &4713573413775092491
 GameObject:
